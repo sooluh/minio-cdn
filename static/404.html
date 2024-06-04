@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Not Found</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: system-ui;
+        font-weight: 300;
+        font-size: 1.25rem;
+        color: #36393a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      main {
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      #text {
+        max-width: 60%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 50px 0;
+      }
+
+      main > section > div:not(:last-child) {
+        margin-bottom: 3.25rem;
+      }
+
+      h1 {
+        font-size: 3.75rem;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+        font-weight: 400;
+        color: #92979b;
+        margin: 0;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      #error-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section id="text">
+        <div>
+          <h1>Error 404</h1>
+          <h3>This object could not be viewed</h3>
+        </div>
+
+        <div>
+          <p id="error-title">You are not authorized to view this object</p>
+          <p>
+            This object does not exist or is not publicly accessible at this URL. Check the URL of
+            the object that you're looking for or contact the owner to enable Public access.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "name": "minio-cdn",
+  "version": "0.0.1",
+  "description": "Serve S3 MinIO files like Cloudflare R2",
+  "module": "src/app.ts",
+  "type": "module",
+  "scripts": {
+    "format": "prettier . --write"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "semi": false,
+    "singleQuote": true,
+    "useTabs": false,
+    "quoteProps": "consistent",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "printWidth": 100
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sooluh/minio-cdn.git"
+  },
+  "author": {
+    "name": "Abu Masyail",
+    "email": "suluhs@aol.com",
+    "url": "https://suluh.my.id"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sooluh/minio-cdn/issues"
+  },
+  "homepage": "https://github.com/sooluh/minio-cdn",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/minio": "^7.1.1",
+    "prettier": "^3.3.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "hono": "^4.4.3",
+    "minio": "^8.0.0"
+  }
+}
