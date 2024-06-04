@@ -29,12 +29,11 @@ app.get('*', async (ctx) => {
   const bucket = process.env.MINIO_BUCKET_NAME!
   const path = ctx.req.path.replace(/^\//, '')
 
-  console.log(bucket, path)
-
   try {
     const object = await getObject(minio, bucket, path)
     const contentType = object.stat.metaData['content-type'] || 'application/octet-stream'
 
+    // is directory object
     if (object.stat.size === 0 && contentType === 'binary/octet-stream') {
       return ctx.notFound()
     }
