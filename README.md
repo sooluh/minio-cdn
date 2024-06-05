@@ -39,7 +39,7 @@ It's very lightweight and fast, powered by [Bun](https://bun.sh).
    bun --watch src/app.ts
    ```
 
-## Docker
+### Docker
 
 1. Build image
 
@@ -59,3 +59,7 @@ It's very lightweight and fast, powered by [Bun](https://bun.sh).
     -p 3000:3000 \
     minio-cdn
    ```
+
+## License
+
+This project is licensed under [MIT License](https://github.com/sooluh/minio-cdn/blob/main/LICENSE).
