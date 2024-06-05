@@ -63,3 +63,7 @@ It's very lightweight and fast, powered by [Bun](https://bun.sh).
 ## License
 
 This project is licensed under [MIT License](https://github.com/sooluh/minio-cdn/blob/main/LICENSE).
+
+## Discalimer
+
+This project is not officially maintained by MinIO. [MinIO trademarks and logo](https://min.io/logo) are the property of MinIO, Inc.
