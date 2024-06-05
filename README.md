@@ -51,8 +51,9 @@ It's very lightweight and fast, powered by [Bun](https://bun.sh).
 
    ```bash
    docker run -d \
-    -e MINIO_ROOT_USER='root' \
-    -e MINIO_ROOT_PASSWORD='root' \
+    -e MINIO_ACCESS_KEY='' \
+    -e MINIO_SECRET_KEY='' \
+    -e MINIO_BUCKET_NAME='app'
     -e MINIO_ENDPOINT='10.10.20.1' \
     -e MINIO_PORT='9000' \
     -e MINIO_USE_SSL='false' \
