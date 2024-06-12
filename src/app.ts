@@ -23,7 +23,22 @@ const minio = new Minio.Client({
 const app = new Hono()
 
 app.use(cors())
+app.get('/favicon.ico', (ctx) => serveStatic(ctx, 'favicon.ico'))
 app.notFound((ctx) => serveStatic(ctx, '404.html', 404))
+
+app.get('/up', async (ctx) => {
+  const bucket = process.env.MINIO_BUCKET_NAME!
+
+  try {
+    await minio.bucketExists(bucket)
+
+    ctx.status(200)
+    return ctx.json({ error: null, bucket })
+  } catch (error) {
+    ctx.status(500)
+    return ctx.json({ error: 'Unable to retrieve bucket', bucket })
+  }
+})
 
 app.get('*', async (ctx) => {
   const bucket = process.env.MINIO_BUCKET_NAME!
